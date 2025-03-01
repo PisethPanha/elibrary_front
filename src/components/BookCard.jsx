@@ -26,7 +26,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
           <div className="p-5 text-center">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
             <p className="mb-3 text-center font-normal text-gray-700 ">View: {view} <br /> Download: {download}</p>
-            <button onClick={() => { setDialog(!dialog); AddView() }}
+            <button onClick={() => { setDialog(!dialog); }}
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               View
               <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -90,7 +90,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
                       Download
                     </button>
                   </a>
-                  <a className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://carefree-empathy-production.up.railway.app/pdf/${read}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" className="dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read</button></a>
+                  <a onClick={AddView} className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://carefree-empathy-production.up.railway.app/pdf/${read}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" className="dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read</button></a>
                 </div>
               </div>
             </div>
