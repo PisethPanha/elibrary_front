@@ -61,14 +61,14 @@ export function CatagItems({ img, title, type }) {
 
     } else {
       setLoading(true)
-      axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: keyword } }).then((res) => { setData(res.data); setLoading(false) })
+      axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: keyword, catagory: type, language: "" } }).then((res) => { setData(res.data); setLoading(false) })
       setBackBTN(true)
     }
   }
   function handleBackToDefaultData() {
     setLoading(true)
-    axios.get("https://carefree-empathy-production.up.railway.app/getbook", { params: { offset: 0, limit: limit, language: '' } }).then((res) => { setData(res.data); setLoading(false) }
-    )
+    axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: '', catagory: type, language: '' } }).then((res) => { setData(res.data); setLoading(false) }
+    ) 
     setBackBTN(false)
   }
   useEffect(() => {

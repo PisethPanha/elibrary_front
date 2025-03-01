@@ -28,12 +28,12 @@ function KhmerBook() {
         if (key == "" && catagory == "") {
             setBackBTN(false)
             setLoading(true)
-            axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: "", catagory: "", language: "khmer" } }).then((res) => { setImage(res.data); setLoading(false) }
+            axios.get("https://carefree-empathy-production.up.railway.app/admin_search", { params: { keyword: "", catagory: "", language: "khmer" } }).then((res) => { setImage(res.data); setLoading(false) }
             )
         } else {
             setResultVisibility(false)
             setBackBTN(true)
-            axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: key, catagory: catagory, language: "khmer" } }).then((res) => setImage(res.data))
+            axios.get("https://carefree-empathy-production.up.railway.app/admin_search", { params: { keyword: key, catagory: catagory, language: "khmer" } }).then((res) => setImage(res.data))
         }
 
 

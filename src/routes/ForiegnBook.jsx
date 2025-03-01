@@ -40,13 +40,13 @@ function ForiegnBook() {
         if (key == "" && catagory == "") {
             setBackBTN(false)
             setLoading(true)
-            axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: "", catagory: "", language: "foriegn" } }).then((res) => { setData(res.data); setLoading(false) }
+            axios.get("https://carefree-empathy-production.up.railway.app/admin_search", { params: { keyword: "", catagory: "", language: "foriegn" } }).then((res) => { setData(res.data); setLoading(false) }
             )
         } else {
             setResultVisibility(false)
             setBackBTN(true)
             setLoading(true)
-            axios.get("https://carefree-empathy-production.up.railway.app/type", { params: { keyword: key, catagory: catagory, language: "foriegn" } }).then((res) => { setData(res.data); setLoading(false) }
+            axios.get("https://carefree-empathy-production.up.railway.app/admin_search", { params: { keyword: key, catagory: catagory, language: "foriegn" } }).then((res) => { setData(res.data); setLoading(false) }
             )
         }
 
