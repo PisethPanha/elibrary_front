@@ -65,24 +65,24 @@ function Navbar() {
       <div onClick={() => setSidebar(false)} className={`fixed w-full z-10 h-full top-0 ${sidebar == false && "hidden"}`}></div>
 
       <div className={`md:hidden border-l-4 p-4 border-l-blue-400 top-0 w-[25rem] h-full fixed z-40 bg-transparent  backdrop-blur-[20px] duration-300 left-[100%] ${sidebar ? "-translate-x-full" : "transalte-x-0"}`}>
-        <div onClick={() => setSidebar(!sidebar)} className='flex gap-4 justify-start p-4 items-center'>
+        <div onClick={() => setSidebar(!sidebar)} className='p-16 flex gap-4 justify-start items-center'>
 
           <svg className="w-3 h-3 text-blue-700 font-[800] text-[30px] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
           </svg>
         </div>
         <ul className="h-[3rem]  font-medium flex flex-col rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white ">
-          <Link to="/">
+          <Link onClick={() => setSidebar(!sidebar)} to="/">
             <li className="p-2 rounded-full duration-100 h-full hover:bg-blue-700 text-white hover:text-white text-center">
               <p style={{ textShadow: "0px 0px 10px black" }} className="text-[25px] font-bold  block h-full duration-75 hover:bg-blue-700  rounded md:bg-transparent md:p-0 " aria-current="page">Home</p>
             </li>
           </Link>
-          <Link to="/foriegn">
+          <Link onClick={() => setSidebar(!sidebar)} to="/foriegn">
             <li className="p-2 rounded-full duration-100 h-full hover:bg-blue-700 text-white hover:text-white text-center ">
               <p style={{ textShadow: "0px 0px 10px black" }} className="text-[25px] font-bold  block h-full  rounded duration-100 md:border-0 md:p-0 ">Foriegn Book</p>
             </li>
           </Link>
-          <Link to="/khmer">
+          <Link onClick={() => setSidebar(!sidebar)} to="/khmer">
             <li className="p-2 rounded-full duration-100 h-full hover:bg-blue-700 text-white hover:text-white text-center ">
               <p style={{ textShadow: "0px 0px 10px black" }} className="text-[25px] font-bold  block h-full  rounded duration-100 md:border-0 md:p-0 ">Khmer Book</p>
             </li>
