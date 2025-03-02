@@ -66,50 +66,50 @@ function KhmerBook() {
 
                 <div className="max-w-lg mx-auto  ">
                     <div className="flex relative">
-                        <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                        <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Your Email</label>
                         <button onClick={() => setDropdown(!dropdown)} id="dropdown-button" data-dropdown-toggle="dropdown" className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 outline-none" type="button"> {catagory == "" ? "All Catagory" : catagory} <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                         </svg></button>
-                        <div id="dropdown" className={`z-10 ${dropdown ? "block" : "hidden"} bg-white divide-y absolute mt-11 divide-gray-100 rounded-lg shadow w-auto dark:bg-gray-700`}>
-                            <ul className="py-2 shadow-lg shadow-black overflow-y-scroll h-[40vh] text-sm text-gray-700 dark:text-gray-200" >
+                        <div id="dropdown" className={`z-10 ${dropdown ? "block" : "hidden"} bg-white divide-y absolute mt-11 divide-gray-100 rounded-lg shadow w-auto `}>
+                            <ul className="py-2 shadow-lg shadow-black overflow-y-scroll h-[40vh] text-sm text-gray-700 " >
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory(""); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">All</button>
+                                    <button type="button" onClick={() => { setGatagory(""); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">All</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("IT"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Information Technology</button>
+                                    <button type="button" onClick={() => { setGatagory("IT"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Information Technology</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("constructor"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Constructor</button>
+                                    <button type="button" onClick={() => { setGatagory("constructor"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Constructor</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("agreculture"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Agreculture</button>
+                                    <button type="button" onClick={() => { setGatagory("agreculture"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Agreculture</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("accounting"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Accounting</button>
+                                    <button type="button" onClick={() => { setGatagory("accounting"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Accounting</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("law"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Law</button>
+                                    <button type="button" onClick={() => { setGatagory("law"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Law</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("chinese"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Chinese</button>
+                                    <button type="button" onClick={() => { setGatagory("chinese"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Chinese</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("english"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</button>
+                                    <button type="button" onClick={() => { setGatagory("english"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">English</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("ganeral"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ganeral Knowledg</button>
+                                    <button type="button" onClick={() => { setGatagory("ganeral"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Ganeral Knowledg</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("history"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">History</button>
+                                    <button type="button" onClick={() => { setGatagory("history"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">History</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("electric"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electric</button>
+                                    <button type="button" onClick={() => { setGatagory("electric"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Electric</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("animal"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Animal husbandry</button>
+                                    <button type="button" onClick={() => { setGatagory("animal"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Animal husbandry</button>
                                 </li>
                                 <li>
-                                    <button type="button" onClick={() => { setGatagory("other"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Other</button>
+                                    <button type="button" onClick={() => { setGatagory("other"); setDropdown(false) }} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">Other</button>
                                 </li>
                             </ul>
                         </div>
@@ -122,7 +122,7 @@ function KhmerBook() {
                                         handleSearchButton(event.target.data);
                                     }
                                 }} onChange={(event) => { handleSearch(event.target.value); setResultVisibility(true) }} id="search-dropdown" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300  outline-none" placeholder="Search ..." required />
-                            <button onClick={() => handleSearchButton(keyword)} className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <button onClick={() => handleSearchButton(keyword)} className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                 </svg>

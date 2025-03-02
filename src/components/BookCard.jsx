@@ -24,10 +24,10 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
             <img onClick={() => { setDialog(!dialog); AddView() }} className={`rounded-t-lg mx-auto w-full h-[16rem]`} src={`https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/${img}`} alt="" />
         
           <div className="p-5 text-center">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
             <p className="mb-3 text-center font-normal text-gray-700 ">View: {view} <br /> Download: {download}</p>
             <button onClick={() => { setDialog(!dialog); }}
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
               View
               <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -43,10 +43,10 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
             <div className="relative custom-scroll-d overflow-y-scroll border-2 border-gray-900 h-full bg-white rounded-lg shadow-sm ">
   
               <div className=" flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
-                <h3 className=" text-xl font-semibold text-gray-900 dark:text-white">
+                <h3 className=" text-xl font-semibold text-gray-900 ">
                   Book details
                 </h3>
-                <button type="button" onClick={() => setDialog(!dialog)} className="text-gray-400  bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                <button type="button" onClick={() => setDialog(!dialog)} className="text-gray-400  bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center " data-modal-hide="default-modal">
                   <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                   </svg>
@@ -84,13 +84,13 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
               <div>
                 <div className=" flex justify-center items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
                   <a href={link} onClick={AddDownload}
-                    className='text-white bg-blue-700 duration-200 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
+                    className='text-white bg-blue-700 duration-200 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center '>
                     <button data-modal-hide="default-modal" type="button"
-                      className="text-white bg-blue-700 duration-200 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      className="text-white bg-blue-700 duration-200 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                       Download
                     </button>
                   </a>
-                  <a onClick={AddView} className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://carefree-empathy-production.up.railway.app/pdf/${read}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" className="dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read</button></a>
+                  <a onClick={AddView} className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://carefree-empathy-production.up.railway.app/pdf/${read}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" >Read</button></a>
                 </div>
               </div>
             </div>
