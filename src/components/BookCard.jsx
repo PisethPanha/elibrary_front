@@ -60,7 +60,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
   
               </div>
   
-              <div className='grid grid-cols-2'>
+              <div className='grid grid-cols-2 max-md:grid-cols-1'>
                 <div className="p-4 md:p-5 space-y-4 w-[500px] max-md:w-[300px]">
                   <div className='text-center'>
                     <h1>Preview</h1>

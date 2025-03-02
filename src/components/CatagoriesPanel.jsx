@@ -113,7 +113,7 @@ export function CatagItems({ img, title, type }) {
 
             </div>
             <div onClick={() => setResultVisibility(!resultVisibility)} className={`w-full h-full absolute bg-transparent top-0 z-10 ${resultVisibility ? "block" : "hidden"}`}></div>
-            <div className="relative max-w-md mx-auto mt-2">
+            <div className="px-8 relative max-w-md mx-auto mt-2">
               <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
               <div className="relative">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
