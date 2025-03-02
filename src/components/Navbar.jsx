@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div>
       <div className='border-b-4 border-b-blue-400'>
-        <img src="https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/full_logo.png" className='p-2 w-[70%] h-[5rem] mx-auto ' alt="" />
+        <img src="https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/full_logo.png" className='p-2 w-[70%] h-[5rem] max-md:w-full mx-auto ' alt="" />
       </div>
       <nav className="bg-white border-gray-200  border-b-4 border-b-blue-400 text-[20px] ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
@@ -88,12 +88,16 @@ function Navbar() {
             </li>
           </Link>
 
+         <Link onClick={() => setSidebar(!sidebar)} to="/about">
           <li className="p-2 rounded-full duration-100 h-full hover:bg-blue-700 text-white hover:text-white text-center ">
             <a style={{ textShadow: "0px 0px 10px black" }} href="#" className="text-[25px] font-bold  block h-full  rounded duration-100 md:border-0 md:p-0 ">ABOUT</a>
           </li>
+          </Link>
+          <Link onClick={() => setSidebar(!sidebar)} to="/contact">
           <li className="p-2 rounded-full duration-100 h-full hover:bg-blue-700 text-white hover:text-white text-center ">
             <a style={{ textShadow: "0px 0px 10px black" }} href="#" className="text-[25px] font-bold  block h-full  rounded duration-100 md:border-0 md:p-0 ">CONTACT</a>
           </li>
+          </Link>
         </ul>
       </div>
 
