@@ -14,9 +14,9 @@ function Footer() {
                 textShadow:
                   '-2px -1px 0 pink'
               }}
-                className="self-center text-[30px] font-[800] whitespace-nowrap dark:text-white">RPITST ELIB</span>
+                className="self-center text-[30px] font-[800] whitespace-nowrap">RPITST ELIB</span>
                     </a>
-                    <ul className="flex max-md:translate-x-8 flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <ul className="flex max-md:translate-x-8 flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
                         <Link to="/about" ><li>
                             <a href="#" className="hover:underline me-4 md:me-6">About</a>
                         </li></Link>
@@ -43,8 +43,8 @@ function Footer() {
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" className="hover:underline">pisethpanha™</a>. All Rights Reserved.</span><br />
+                <hr className="my-6 border-gray-200 sm:mx-autolg:my-8" />
+                <span className="block text-sm text-gray-500 text-center">© 2025 <a href="https://flowbite.com/" className="hover:underline">pisethpanha™</a>. All Rights Reserved.</span><br />
                 <h1 className='text-center font-[700]'>មានសេវាកម្ម បង្កើតវេបសាយគ្រប់ប្រភេទ បង្កើតប្រព័ន្ធគ្រប់គ្រងហាង និង ឌីសាញ poster  </h1>
             </div>
         </footer>
