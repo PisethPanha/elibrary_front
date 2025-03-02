@@ -10,7 +10,7 @@ function Navbar() {
       <div className='border-b-4 border-b-blue-400'>
         <img src="https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/full_logo.png" className='p-2 w-[70%] h-[5rem] mx-auto ' alt="" />
       </div>
-      <nav className="bg-white border-gray-200  border-b-4 border-b-blue-400 text-[20px]  ">
+      <nav className="bg-white border-gray-200  border-b-4 border-b-blue-400 text-[20px] ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <Link to='/'>
             <div className="flex relative items-center space-x-3 rtl:space-x-reverse p-4">
@@ -18,7 +18,7 @@ function Navbar() {
                 textShadow:
                   '-2px -1px 0 pink'
               }}
-                className="self-center text-[30px] font-[800] whitespace-nowrap ">RPITST ELIB</span>
+                className="self-center text-[30px] max-md:text-[18px] font-[800] whitespace-nowrap ">RPITST ELIB</span>
             </div>
 
           </Link>
@@ -49,14 +49,14 @@ function Navbar() {
                 </li>
               </Link>
               <Link to="/about">
-              <li onClick={() => setStanding(5)} className={`p-2 rounded-full duration-100 h-full md:hover:bg-blue-700 text-gray-900 hover:text-white ${standing == 5 ? "bg-blue-700 text-white" : ""}`}>
-                <p className={`block h-full  rounded duration-100 md:border-0 md:p-0`}>ABOUT</p>
-              </li>
+                <li onClick={() => setStanding(5)} className={`p-2 rounded-full duration-100 h-full md:hover:bg-blue-700 text-gray-900 hover:text-white ${standing == 5 ? "bg-blue-700 text-white" : ""}`}>
+                  <p className={`block h-full  rounded duration-100 md:border-0 md:p-0`}>ABOUT</p>
+                </li>
               </Link>
               <Link to="/contact">
-              <li onClick={() => setStanding(6)} className={`p-2 rounded-full duration-100 h-full md:hover:bg-blue-700 text-gray-900 hover:text-white ${standing == 6 ? "bg-blue-700 text-white" : ""}`}>
-                <p className={`block h-full  rounded duration-100 md:border-0 md:p-0 `}>CONTACT</p>
-              </li>
+                <li onClick={() => setStanding(6)} className={`p-2 rounded-full duration-100 h-full md:hover:bg-blue-700 text-gray-900 hover:text-white ${standing == 6 ? "bg-blue-700 text-white" : ""}`}>
+                  <p className={`block h-full  rounded duration-100 md:border-0 md:p-0 `}>CONTACT</p>
+                </li>
               </Link>
             </ul>
           </div>
@@ -64,10 +64,12 @@ function Navbar() {
       </nav>
       <div onClick={() => setSidebar(false)} className={`fixed w-full z-10 h-full top-0 ${sidebar == false && "hidden"}`}></div>
 
-      <div className={`md:hidden border-l-4 p-4 border-l-blue-400 top-0 w-[25rem] h-full fixed z-40 bg-transparent  backdrop-blur-[20px] duration-300 ${sidebar ? "right-0" : "-right-[100%]"}`}>
-        <div className='flex gap-4 justify-start p-4 items-center'>
+      <div className={`md:hidden border-l-4 p-4 border-l-blue-400 top-0 w-[25rem] h-full fixed z-40 bg-transparent  backdrop-blur-[20px] duration-300 left-[100%] ${sidebar ? "-translate-x-full" : "transalte-x-0"}`}>
+        <div onClick={() => setSidebar(!sidebar)} className='flex gap-4 justify-start p-4 items-center'>
 
-
+          <svg className="w-3 h-3 text-blue-700 font-[800] text-[30px] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
         </div>
         <ul className="h-[3rem]  font-medium flex flex-col rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white ">
           <Link to="/">
