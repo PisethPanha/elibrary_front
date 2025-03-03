@@ -60,8 +60,8 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
   
               </div>
   
-              <div className='grid grid-cols-2 max-md:grid-cols-1'>
-                <div className="p-4 md:p-5 space-y-4 w-[500px] max-md:w-[300px]">
+              <div className='grid grid-cols-2 max-md:grid-cols-1 items-center max-md:justify-center'>
+                <div className="p-4 md:p-5 space-y-4 max-md:mx-auto w-[500px] max-md:w-[300px]">
                   <div className='text-center'>
                     <h1>Preview</h1>
                     <div
@@ -72,7 +72,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
                     </div>
                   </div>
                 </div>
-                <div className=" p-4 md:p-5 space-y-4 max-md:w-[300px]">
+                <div className=" max-md:mx-auto p-4 md:p-5 space-y-4 max-md:w-[300px]">
                   <div className='text-center'>
                     <h1>Description</h1>
                     <div className='custom-scroll overflow-y-scroll p-4 h-56 text-center  grid items-center justify-center gap-4'>
