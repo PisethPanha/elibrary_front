@@ -111,8 +111,8 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
                 <span className="sr-only">Close modal</span>
               </button>
               <div className='w-full h-full'>
-                <iframe className='md:hidden' src={`https://drive.google.com/viewerng/viewer?embedded=true&url=https://carefree-empathy-production.up.railway.app/pdf/${read}`} width="100%" height="100%"></iframe>
-                <iframe className='md:block' src={`https://carefree-empathy-production.up.railway.app/pdf/${read}`} width="100%" height="100%"></iframe>
+                
+              <iframe src={`https://drive.google.com/viewerng/viewer?embedded=true&url=https://carefree-empathy-production.up.railway.app/pdf/${read}`} width="100%" height="100%"></iframe>
                 
               </div>
             </div>
