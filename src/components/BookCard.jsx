@@ -112,7 +112,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
               </button>
               <div className='w-full h-full'>
                 
-              <iframe src={`https://docs.google.com/gview?url=https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/${read}&embedded=true`} width="100%" height="100%"></iframe>
+              <iframe src={`https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/${read}`} width="100%" height="100%"></iframe>
                 
               </div>
             </div>
