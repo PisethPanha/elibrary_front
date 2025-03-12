@@ -1,9 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/rb_80699.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const [standing, setStanding] = useState();
+  const pathName = useLocation();
+
+  useEffect(() => {
+    if(pathName.pathname == "/"){
+      setStanding(1)
+    } 
+    else if(pathName.pathname == "/foriegn"){
+      setStanding(2)
+    }
+    else if(pathName.pathname == "/khmer"){
+      setStanding(3)
+    }
+    else if(pathName.pathname == "/about"){
+      setStanding(5)
+    }
+    else if(pathName.pathname == "/contact"){
+      setStanding(6)
+    }
+    
+  },[pathName])
+
 
   return (
     <div>

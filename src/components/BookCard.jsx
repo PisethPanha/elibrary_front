@@ -106,7 +106,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
                     Download
                   </button>
                 </a>
-                <a onClick={AddView} className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/${read}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" >Read</button></a>
+                <a onClick={AddView} className='py-2.5 px-5 ms-3 text-sm font-medium duration-200 focus:outline-none bg-blue-700 rounded-lg border border-gray-200 hover:bg-blue-400 text-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ' href={`https://drive.google.com/viewerng/viewer?embedded=true&url=${link}`} target="_blank" rel="noopener noreferrer"><button data-modal-hide="default-modal" type="button" >Read</button></a>
                 {/* <button onClick={() => {setReading(true); AddView()}} data-modal-hide="default-modal" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Read</button> */}
               </div>
             </div>
