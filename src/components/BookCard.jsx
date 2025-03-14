@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './scrollbar.css'
 
-function BookCard({ cardWidth, read, download, view, id, img, title, author, describ, publisher, publish_date, link, img1, img2, img3 }) {
+function BookCard({ acception, status, cardWidth, read, download, view, id, img, title, author, describ, publisher, publish_date, link, img1, img2, img3 }) {
   const [dialog, setDialog] = useState()
   const [imgZoom, setImgZoom] = useState()
   const [imgWillZoom, setImgWillZoom] = useState()
@@ -41,7 +41,7 @@ function BookCard({ cardWidth, read, download, view, id, img, title, author, des
 
         <div className="p-5 text-center">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
-          <p className="mb-3 text-center font-normal text-gray-700 ">View: {view} <br /> Download: {download}</p>
+          <p className="mb-3 text-center font-normal text-gray-700 ">View: {view} <br /> Download: {download} <br />  {status ? `status: ${acception}` : "" } </p>
           <button onClick={() => { setDialog(!dialog); }}
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
             View

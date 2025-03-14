@@ -55,7 +55,7 @@ function Home() {
     setLoading1(true)
     setLoading2(true)
     setLoading3(true)
-    axios.get("https://carefree-empathy-production.up.railway.app/getbook", { params: { offset: offset, limit: limit, language: "" } }).then((res) => { setImage(res.data); setLoading1(false) }
+    axios.get("https://carefree-empathy-production.up.railway.app/getbook", { params: { offset: offset, limit: limit, language: "", status: "true" } }).then((res) => { setImage(res.data); setLoading1(false) }
     )
     axios.get("https://carefree-empathy-production.up.railway.app/most-view").then((res) => { setData(res.data); setLoading2(false) }
     )

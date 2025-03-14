@@ -10,6 +10,7 @@ import Aboute from "./routes/Aboute"
 import Privacy from "./routes/Privacy"
 import Footer from "./components/Footer"
 import Contact from "./routes/Contact"
+import Login from "./routes/Login"
 function App() {
   return (
     <>
@@ -21,7 +22,8 @@ function App() {
         <Route path="/foriegn" element={<ForiegnBook/>}/>
         <Route path="/about" element={<Aboute/>}/>
         <Route path="/privacy-policy" element={<Privacy/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/upload" element={<Contact/>}/>
+        <Route path="/your-book" element={<Login/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
