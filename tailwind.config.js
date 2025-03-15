@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
         khmer: ['"khmer os muol light"', "sans-serif"]
-      }
+      },
+     screens: {
+      'xmd': '837px'
+     }
     },
   },
   plugins: [],
