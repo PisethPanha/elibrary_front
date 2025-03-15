@@ -33,6 +33,11 @@ function Navbar() {
   }, [pathName])
 
   useEffect(() => {
+    if(window.innerWidth <= 836){
+      setNavbarStyle(true)
+    }else{
+      setNavbarStyle(false)
+    }
     window.addEventListener("resize", () => {
       if(window.innerWidth <= 836){
         setNavbarStyle(true)
