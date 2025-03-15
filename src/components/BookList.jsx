@@ -11,7 +11,7 @@ function BookList({ CardWidth, display ,img, more, moreVissible, language }) {
     setMore(more)
   }, [img, more])
   function fetchMore() {
-    axios.get("https://carefree-empathy-production.up.railway.app/getbook", { params: { offset: offset + 10, limit: limit, language: language } }).then((res) => {
+    axios.get("https://carefree-empathy-production.up.railway.app/getbook", { params: { offset: offset + 10, limit: limit, language: language, status: "true" } }).then((res) => {
       console.log(res.data.length);
       if (res.data.length != 0) {
         setData([...data, ...res.data])
