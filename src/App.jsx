@@ -1,9 +1,8 @@
 import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./routes/Home"
-
+import "@fontsource/noto-sans-khmer";
 import Navbar from "./components/Navbar"
-
 import KhmerBook from "./routes/KhmerBook"
 import ForiegnBook from "./routes/ForiegnBook"
 import Aboute from "./routes/Aboute"

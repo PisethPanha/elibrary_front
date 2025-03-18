@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource/noto-sans-khmer": "^5.2.5",
     "@react-oauth/google": "^0.12.1",
     "axios": "^1.7.9",
     "framer-motion": "^11.17.0",

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        khmer: ['"khmer os muol light"', "sans-serif"]
+        khmer: ['"khmer os muol light"', "sans-serif"],
+        khmerNoto: ["Noto Sans Khmer", "sans-serif"]
       },
      screens: {
       'xmd': '837px'
