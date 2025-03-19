@@ -11,7 +11,9 @@ export default {
         khmerNoto: ["Noto Sans Khmer", "sans-serif"]
       },
      screens: {
-      'xmd': '837px'
+      'xmd': '837px',
+      'maxmd': '770px',
+      
      }
     },
   },

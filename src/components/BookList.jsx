@@ -27,7 +27,7 @@ function BookList({ CardWidth, display ,img, more, moreVissible, language }) {
 
   return (
     <div className='grid justify-center items-center w-full '>
-      <div className={`${display ? "grid grid-cols-3 max-sm:grid-cols-1 gap-4 max-md:grid-cols-2 justify-center items-center p-8" : "flex overflow-x-scroll w-full gap-8 p-8"}`}>
+      <div className={`${display ? "grid grid-cols-3 max-sm:grid-cols-1 gap-4 max-maxmd:grid-cols-2 justify-center items-center p-8" : "flex overflow-x-scroll w-full gap-8 p-8"}`}>
         {data != 0 ? data.map((ele, i) => <BookCard key={i} status={false} cardWidth={CardWidth} read={ele.read_link} download={ele.download} view={ele.view} id={ele.id} img={ele.img} title={ele.Title} describ={ele.describetion} link={ele.link_download} img1={ele.img_content1} img2={ele.img_content2} img3={ele.img_content3} author={ele.autor} publish_date={ele.publish_date} publisher={ele.publisher} />) : <div className='w-[10rem] mx-auto '>no result</div>}
 
       </div>
