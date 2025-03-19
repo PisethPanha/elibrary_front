@@ -334,7 +334,7 @@ function Contact() {
 
             <div className=" grid items-center justify-center p-4 md:p-5">
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
-                Title
+                Book Title
               </h3>
               <br />
               <input
