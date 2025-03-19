@@ -8,23 +8,31 @@ function Login() {
     const [book, setBook] = useState([])
     const [bookExist, setBookExist] = useState(false)
     useEffect(() => {
-        const bookRequest = JSON.parse(localStorage.getItem("BookRequest"))
+        const bookRequest = JSON.parse(localStorage.getItem("BookRequest")) || []
+        console.log(bookRequest);
+        
 
-        bookRequest != null ?
+        bookRequest != null || bookRequest.length != 0 ?
             bookRequest.map((ele, i) => {
                 axios.get("https://carefree-empathy-production.up.railway.app/book-requested", { params: { id: ele } })
-                    .then((res) => { !res.data.message && setBook([...book, res.data]) }
+                    .then((res) => { !res.data.message && setBook( pre => [...pre, res.data])
+                     }
                     )
             }): 
-            setBookExist(true);
-
-        console.log(book);
-        console.log(bookRequest);
+            setTonull();
+        // console.log(localStorage.getItem("BookRequest"));
+        
+        
 
     }, [])
 
+    function setTonull(){
+        setBookExist(true);
+        localStorage.setItem("BookRequest", null )
+    }
+
     useEffect(() => {
-        console.log(book);
+        
         
     },[book])
     return (
