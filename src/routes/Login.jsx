@@ -12,14 +12,11 @@ function Login() {
         console.log(bookRequest);
         
 
-        bookRequest != null || bookRequest.length != 0 ?
-            bookRequest.map((ele, i) => {
-                axios.get("https://carefree-empathy-production.up.railway.app/book-requested", { params: { id: ele } })
-                    .then((res) => { !res.data.message && setBook( pre => [...pre, res.data])
-                     }
-                    )
-            }): 
-            setTonull();
+        
+            
+                axios.get("https://carefree-empathy-production.up.railway.app/get-user-book-request", { params: { items: bookRequest } })
+                    .then((res) =>  setBook(res.data))
+          
         // console.log(localStorage.getItem("BookRequest"));
         
         
@@ -27,12 +24,13 @@ function Login() {
     }, [])
 
     function setTonull(){
-        setBookExist(true);
+       
         localStorage.setItem("BookRequest", null )
     }
 
     useEffect(() => {
-        
+        console.log(book.length);
+        // setTonull()
         
     },[book])
     return (
@@ -41,19 +39,23 @@ function Login() {
             <br />
                 <h1 className='text-[30px] font-[700] border-b-8 border-blue-500 max-w-[30rem] mx-auto text-center uppercase'>Your Book</h1>
                 <br />
-                <p className={`text-center ${bookExist ? "hidden" : "block"}`}>ការស្នើរសុំបោះផ្សាយសៀវភៅរបស់នឹងត្រូវពិនិត្យមើលឡើងវិញយ៉ាងយូរ ៣​ថ្ងៃ មុនអនុញ្ញាតិបោះផ្សាយ</p>
+                <p className={`text-center ${book.length == 0 ? "hidden" : "block"}`}>ការស្នើរសុំបោះផ្សាយសៀវភៅរបស់នឹងត្រូវពិនិត្យមើលឡើងវិញយ៉ាងយូរ ៣​ថ្ងៃ មុនអនុញ្ញាតិបោះផ្សាយ</p>
             <div className={`grid ${bookExist ? "" : "grid-cols-3"} gap-4 max-md:grid-cols-1 justify-center items-center p-8`}>
                 {
-                bookExist == false ?
+                book.length != 0 &&
                 book.map((ele, i) =>
-                    ele.map((ele,i) => 
+                    
                         <BookCard key={i} status={true} cardWidth={"w-[18rem]"} acception={ele.status == "false" ? "reviewing" : "published" } read={ele.read_link} download={ele.download} view={ele.view} id={ele.id} img={ele.img} title={ele.Title} describ={ele.describetion} link={ele.link_download} img1={ele.img_content1} img2={ele.img_content2} img3={ele.img_content3} author={ele.autor} publish_date={ele.publish_date} publisher={ele.publisher} />
-                    )
-                ):
-                <div className=" w-full ">
-                <p className="text-center mx-auto ">អ្នកមិនមានការស្នើរបោះផ្សាយសៀវភៅទេ</p>
+                   
+                )
+            }
+            {
+                book.length == 0 &&
+                <div className=" w-full absolute ">
+                <p className="text-center mx-auto font-khmer ">អ្នកមិនមានសៀវភៅដែលបានដាក់ស្នើរទេ</p>
                 </div>
             }
+
             </div>
         </div>
 
