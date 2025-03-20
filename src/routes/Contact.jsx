@@ -343,15 +343,17 @@ function Contact() {
               </h3>
               <br />
               <input
+                placeholder='ចំណងជើង (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
                 onChange={(event) => setBookTitle(event.target.value)}
                 type="text"
                 className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block  max-md:w-auto  w-[30rem] p-4 " />
 
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
-                Book File (pdf only)
+                ឯកសារ (ប្រភេទជា .pdf)
               </h3>
               <br />
               <input
+                
                 onChange={(event) => setBookFile(event.target.files[0])}
                 type="file" accept='.pdf' className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
@@ -359,20 +361,22 @@ function Contact() {
               </h3>
               <br />
               <input
+                placeholder='ឈ្មោះអ្នកនិពន្ធ (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
                 onChange={(event) => setBookAuthor(event.target.value)}
                 type="text" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
-              <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
+              <h3 className="uppercase mx-auto text-xl  font-semibold text-gray-900 ">
                 Publisher
               </h3>
               <br />
               <input
+                placeholder='ឈ្មោះអ្នកបោះផ្សាយ (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
                 onChange={(event) => setBookPublisher(event.target.value)}
                 type="text" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
 
               <br />
 
               <form className="max-w-sm grid items-center justify-center mx-auto">
-                <label htmlFor="type" className="block mb-2 text-sm font-medium text-gray-900 ">Select an option</label>
+                <label htmlFor="type" className="block font-khmer text-center mb-2 text-sm font-medium text-gray-900 ">ប្រភេទសៀវភៅ</label>
                 <select
                   onChange={(event) => setBookType(event.target.value)}
                   id="type" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " >
@@ -393,7 +397,7 @@ function Contact() {
                 </select>
               </form>
               <form className="max-w-sm grid items-center justify-center mx-auto">
-                <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 ">Select an option</label>
+                <label htmlFor="countries" className="block mb-2 text-center text-sm font-medium text-gray-900 font-khmer ">ភាសា</label>
                 <select
                   onChange={(event) => setBookLanguage(event.target.value)}
                   id="countries" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " >
@@ -406,14 +410,14 @@ function Contact() {
 
 
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
-                Description
+                ការពិព័ណ៌នា
               </h3>
               <textarea
                 onChange={(event) => { setBookDescrib(event.target.value) }}
                 rows="4" className="block font-[700] text-[20px] p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Write your thoughts here..." ></textarea>
               <br />
-              <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
-                preview images
+              <h3 className="uppercase font-khmer mx-auto text-xl font-semibold text-gray-900 ">
+                រូបក្រប​ (១) និង​ រូបមាតិកា (២)
               </h3>
               <br />
               <div className="grid md:grid-cols-3 gap-4 items-center justify-center">
@@ -476,8 +480,8 @@ function Contact() {
               </div>
             </div>
             <div className='flex justify-center items-center p-4'>
-              <button onClick={handleSubmit} type="button" className="duration-200 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Submit</button>
-              <button type="button" className="duration-200 text-white bg-gray-400 hover:bg-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Discard</button>
+              <button onClick={handleSubmit} type="button" className="duration-200 font-khmer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">ដាក់ស្នើរ</button>
+              {/* <button type="button" className="duration-200 text-white bg-gray-400 hover:bg-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Discard</button> */}
             </div>
           </div>
         </div>
