@@ -342,18 +342,21 @@ function Contact() {
                 Book Title
               </h3>
               <br />
-              <input
-                placeholder='ចំណងជើង (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
-                onChange={(event) => setBookTitle(event.target.value)}
-                type="text"
-                className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block  max-md:w-auto  w-[30rem] p-4 " />
+              <div className='mb-6'>
+                <input
+                  placeholder='ចំណងជើង (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
+                  onChange={(event) => setBookTitle(event.target.value)}
+                  type="text"
+                  className=" relative font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block  max-md:w-auto  w-[30rem] p-4 " />
+                <p className={` ${BookTitle.length > 1000 && "text-red-600"} text-center`}>{BookTitle.length}/1000</p>
+              </div>
 
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
                 ឯកសារ (ប្រភេទជា .pdf)
               </h3>
               <br />
               <input
-                
+
                 onChange={(event) => setBookFile(event.target.files[0])}
                 type="file" accept='.pdf' className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
               <h3 className="uppercase mx-auto text-xl font-semibold text-gray-900 ">
@@ -363,7 +366,9 @@ function Contact() {
               <input
                 placeholder='ឈ្មោះអ្នកនិពន្ធ (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
                 onChange={(event) => setBookAuthor(event.target.value)}
-                type="text" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
+                type="text" className=" font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
+              <p className={` ${BookAuthor.length > 1000 && "text-red-600 "} mb-6 text-center`}>{BookAuthor.length}/1000</p>
+              
               <h3 className="uppercase mx-auto text-xl  font-semibold text-gray-900 ">
                 Publisher
               </h3>
@@ -371,8 +376,8 @@ function Contact() {
               <input
                 placeholder='ឈ្មោះអ្នកបោះផ្សាយ (មិនត្រូវលើសពី ១០០០​ តួរអក្សរ)'
                 onChange={(event) => setBookPublisher(event.target.value)}
-                type="text" className="mb-6 font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
-
+                type="text" className=" font-[700] text-[20px] text-gray-700 outline-none mx-auto  border-2 border-gray-300  text-sm rounded-lg block max-md:w-auto w-[30rem] p-4 " />
+              <p className={` ${BookPublisher.length > 1000 && "text-red-600 "} mb-6 text-center`}>{BookPublisher.length}/1000</p>
               <br />
 
               <form className="max-w-sm grid items-center justify-center mx-auto">
@@ -415,6 +420,7 @@ function Contact() {
               <textarea
                 onChange={(event) => { setBookDescrib(event.target.value) }}
                 rows="4" className="block font-[700] text-[20px] p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Write your thoughts here..." ></textarea>
+               <p className={` ${BookDescrib.length > 1000 && "text-red-600 "} mb-6 text-center`}>{BookDescrib.length}/8000</p>
               <br />
               <h3 className="uppercase font-khmer mx-auto text-xl font-semibold text-gray-900 ">
                 រូបក្រប​ (១) និង​ រូបមាតិកា (២)
