@@ -14,8 +14,8 @@ function CatagoriesPanel() {
         <CatagItems type='law' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(13).png"} title="Law" />
         <CatagItems type='chinese' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/fkmfdlmbm54354543_167_167.png"} title="Chinese" />
         <CatagItems type='English' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(14).png"} title="English" />
-        <CatagItems type='chinese' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(12).png"} title="General Knowledg" />
-        <CatagItems type='chinese' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(8).png"} title="History" />
+        <CatagItems type='ganeral' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(12).png"} title="General Knowledg" />
+        <CatagItems type='history' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(8).png"} title="History" />
         <CatagItems type='electric' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(9).png"} title="Electric" />
         <CatagItems type='electronic' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(11).png"} title="Electronic" />
         <CatagItems type='animal' img={"https://raw.githubusercontent.com/PisethPanha/ebook_photos/refs/heads/main/pngwing.com%20(10).png"} title="Animal husbandry" />

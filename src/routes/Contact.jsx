@@ -101,7 +101,12 @@ function Contact() {
     ) {
       alert("All field can not empty !!!")
 
+    } else if (BookDescrib.length > 8000) {
+      alert("អត្ថបទពិពណ៌នាអំពីសៀវភៅត្រូវមានចំនួនអក្សរតិចជាង 8000 តួរ")
+    } else if (BookTitle.length > 1000) {
+      alert("ចំណងជើងសៀវភៅត្រូវមានចំនួនអក្សរតិចជាង 1000 តួរ")
     } else {
+
       setLoading(true)
       const today = new Date();
       const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based
@@ -134,7 +139,7 @@ function Contact() {
           console.log(res.data.id);
           setFileReady1(1)
           for (let y = 0; y < 3; y++) {
-            uploadToGitHub(images[y], upStatus[y], res.data.id+1, y)
+            uploadToGitHub(images[y], upStatus[y], res.data.id + 1, y)
           }
           uploadPDFToGitHub(BookFile, (link) => {
             console.log(link);
